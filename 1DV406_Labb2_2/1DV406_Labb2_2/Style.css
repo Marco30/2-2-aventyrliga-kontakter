@@ -1,0 +1,379 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/*Här börjar min CSS */
+/*#content {
+width:1280px;
+height:740px;
+margin:auto;
+background-image:url('images/wood.jpg');
+position: absolute;
+}*/
+#inramning
+{
+width: 846px;
+margin: 42px auto;
+border-radius: 25px;
+background: none repeat scroll 0% 0% rgba(34, 24, 28, 0.5);
+color: rgba(34, 24, 28, 0.5);
+height: 901px;
+}
+#TitleLabel
+{
+margin: 29px 54px -61px 206px;
+color: #FFF;
+font-size: 32px;
+line-height: 169px;
+font-family: Verdana;
+}
+#SelectedImage
+{
+margin: -496px 127px 29px 0px;
+color: #FFF;
+font-size: 32px;
+line-height: 62px;
+font-family: Verdana;
+}
+#thumbnails
+{
+margin: -116px 54px -2px 32px;
+color: #FFF;
+font-size: 32px;
+line-height: 0px;
+font-family: Verdana;
+}
+#Bildvisaren
+{
+margin: 835px 61px 99px 59px;
+color: #FFF;
+font-size: 32px;
+line-height: 62px;
+font-family: Verdana;
+}
+#Close 
+{
+    margin: 7px 3px 0px 189px;
+    font-family: Verdana;
+    font-size: 19px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+#StatusMessage1
+{
+margin: 7px 3px -431px 191px;
+font-family: Verdana;
+font-size: 19px;
+color: #FFF;
+text-decoration: none;
+}
+
+#CloseMessage1
+{
+margin: 25px 14px -412px 1px;
+font-family: Verdana;
+font-size: 19px;
+color: #41C219;
+text-decoration: none;
+}
+
+#GuessLabel
+{
+margin: 8px 3px 0px 0px;
+font-family: Verdana;
+font-size: 24px;
+}
+#TempIntervalBox
+{
+margin: 6px 3px 0px 20px;
+font-family: Verdana;
+font-size: 19px;
+}
+#PictureUpload
+{
+margin: 44px 0px 0px 75px;
+font-family: Verdana;
+font-size: 25px;
+color: #FFF;
+}
+#ShowResultLabel
+{
+margin: 31px 3px 0px 117px;
+font-family: Verdana;
+font-size: 24px;
+color: #FFF;
+}
+#NewSecretNoButton
+{
+margin: -37px 3px 0px 148px;
+font-size: 20px;
+font-family: Verdana;
+}
+
+#text
+{
+margin: 11px 0px 13px 75px;
+font-size: 25px;
+font-family: Verdana;
+color: #FFF;
+}
+#RequiredFieldValidator1
+{
+margin: 14px 3px 0px 88px;
+font-size: 20px;
+font-family: Verdana;
+}
+#val1
+{
+margin: 1px 0px 0px 86px;
+font-size: 20px;
+font-family: Verdana;
+line-height: 31px;
+color: #FFF;
+}
+
+#ct103
+ {
+    color: #F00;
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 150%;
+}
+#ValidationSummary1 
+{
+margin: 12px 0px 0px 86px;
+font-size: 25px;
+font-family: Verdana;
+line-height: 31px;
+color: #F51515;
+}
+
+.imageBorder 
+{
+    border: 3px solid;
+}
+
+#val
+{
+margin: -45px 0px -380px 187px;
+font-size: 25px;
+font-family: Verdana;
+line-height: 31px;
+color: #F90B0B;
+}
+#UploadButton1
+{
+margin: -23px 3px 0px 76px;
+font-family: Verdana;
+font-size: 25px;
+color: #FFF;
+}
+
+#UploadButton
+{
+margin: 46px 3px 0px -1px;
+font-family: Verdana;
+font-size: 24px;
+color: #090909;
+}
+#NewSecretNoButton
+{
+margin: 14px 3px 0px 88px;
+font-size: 20px;
+font-family: Verdana;
+}
+body
+{
+background-image:url('Centimeter1.jpg');
+}
+#error
+{
+margin: 47px 31px -209px 89px;
+color: #FFF;
+font-size: 32px;
+line-height: 496px;
+font-family: Verdana;
+}
+#errortext
+{
+margin: 2px 66px 42px 81px;
+color: #FFF;
+font-family: Verdana;
+font-size: 32px;
+}
+#menu {
+width:100%;
+border-top: 5px solid black;
+position:absolute; bottom:0;
+background-color: rgba(34, 24, 28, 0.5);
+background: rgba(34, 24, 28, 0.5);
+color: rgba(34, 24, 28, 0.5);
+}
+#Menyikon {
+float:left;
+margin:8px;
+}
+#Menyikon:hover {
+cursor: pointer;
+}
+#bild {
+font-family:Verdana;
+color:white;
+border:solid white 1px;
+float:right;
+margin-top:25px;
+margin-right:10px;
+}
+#image {
+padding: 13px;
+margin-top: -6px;
+margin-left: -3px;
+width: 35px;
+height: auto;
+}
+#avslutaikon {
+float: right;
+margin-top: 12px;
+margin-right: 5px;
+}
+#avslutaikon:hover {
+cursor:pointer;
+}
+.headerText {
+color: white;
+font-family:Helvetica;
+margin-left:30px;
+margin-top:-24px;
+}
+#popup{
+width: 371px;
+height: 494px;
+position: absolute;
+top: 206px;
+left: 527px;
+/*border: 2px solid green;
+background-color: black;*/
+}
+#top{
+width: 100%;
+height: 60px;
+background: none repeat scroll 0% 0% rgba(34, 24, 28, 0.5);
+color: rgba(34, 24, 28, 0.5);
+border-bottom: 1px solid #FFF;
+}
+#topright{
+width:250px;
+height:40px;
+float:right;
+padding-right:5px;
+}
+#topleft{
+width:100px;
+height:30px;
+float:left;
+margin:5px 0 0 5px;
+}
+#footer {
+width:100%;
+height:38px;
+border-top: 1px solid white;
+background: none repeat scroll 0% 0% rgba(34, 24, 28, 0.5);
+color: rgba(34, 24, 28, 0.5);
+}
+#load
+{
+margin: 9px 594px 31px 122px;
+}
+#mid{
+width: 100%;
+height: 395px;
+background: none repeat scroll 0% 0% rgba(34, 24, 28, 0.5);
+color: rgba(34, 24, 28, 0.5);
+overflow: auto;
+}
+.boxes {
+background-color: #D2CBC5;
+margin:10px;
+float:left;
+padding:4px;
+text-align:center;
+}
+/* Table settings */
+table, th, td 
+{
+     border: 1px solid;
+    font-family: Verdana;
+    margin: 393px 75px 34px 53px;
+    font-size: 15px;
+    color: #FFF;
+    padding-left: 11px;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+li {
+    list-style: circle;
+    padding-left: 10px;
+}
+
+.field-validation-error {
+    color: red;
+    font-size: 10pt;
+}
+
+.validation-summary-error {
+    color: red;
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 150%;
+}
