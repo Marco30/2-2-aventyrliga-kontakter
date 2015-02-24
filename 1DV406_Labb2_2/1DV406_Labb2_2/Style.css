@@ -61,7 +61,7 @@ height: 901px;
 }
 #TitleLabel
 {
-margin: 29px 54px -61px 206px;
+margin: 31px 54px -61px 267px;
 color: #FFF;
 font-size: 32px;
 line-height: 169px;
@@ -93,11 +93,12 @@ font-family: Verdana;
 }
 #Close 
 {
-    margin: 7px 3px 0px 189px;
-    font-family: Verdana;
-    font-size: 19px;
-    color: #FFF;
-    text-decoration: none;
+  font-family: Verdana;
+font-size: 29px;
+color: #FFF;
+text-decoration: none;
+background-color: #B0B4BF;
+padding-left: 241px;
 }
 
 #StatusMessage1
@@ -342,18 +343,42 @@ text-align:center;
 /* Table settings */
 table, th, td 
 {
-     border: 1px solid;
-    font-family: Verdana;
-    margin: 393px 75px 34px 53px;
-    font-size: 15px;
-    color: #FFF;
-    padding-left: 11px;
+    border: 1px solid;
+font-family: Verdana;
+margin: 393px 75px 34px 33px;
+font-size: 16px;
+color: #FFF;
+background-color: #B0B4BF;
+font-weight: bold;
+padding: 4px;
 }
 
 
 a:link {
+    color: #3580a7;
     text-decoration: none;
 }
+
+a:visited {
+    color: #3580a7;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #66afd5;
+    text-decoration: underline;
+}
+
+a:focus {
+    color: #66afd5;
+    text-decoration: underline;
+}
+
 
 ul {
     padding-left: 35px;
@@ -376,4 +401,32 @@ li {
     font-size: 12pt;
     font-weight: 700;
     line-height: 150%;
+}
+
+.normalTable {
+width: 92%;
+border: 1px solid;
+}
+
+.normalTable tr:nth-child(2n+1) {
+    background-color: #F0F3F5;
+    color: red;
+}
+
+.normalTable td {
+border-collapse: collapse;
+padding: 1px;
+text-align: center;
+}
+
+.normalTableHeader {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#sitePaging {
+  margin-top: 20px;
+font-size: 16pt;
+background-color: #B0B4BF;
+padding-left: 241px;
 }

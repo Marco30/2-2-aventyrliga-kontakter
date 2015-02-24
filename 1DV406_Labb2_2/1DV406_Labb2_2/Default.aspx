@@ -61,6 +61,7 @@
                         <asp:PlaceHolder ID="itemPlaceholder" runat="server" />
                             </table>
                             <div id="sitePaging">
+                                <!-- Meny ruta med fram back, till sista till första  -->
                                 <asp:DataPager ID="DataPager" runat="server" PageSize="20" QueryStringField="Page">
                                     <Fields>
                                         <asp:NextPreviousPagerField ShowFirstPageButton="True" FirstPageText=" Första " ShowNextPageButton="False" ShowPreviousPageButton="True" ButtonType="Button"  />
@@ -77,6 +78,7 @@
                             <tr>
                                  <td>
                                 <asp:Label ID="ItemFNameLabel" runat="server" Text='<%#: Item.FirstName %>'></asp:Label>
+
                             </td>
                             <td>
                                 <asp:Label ID="ItemLNameLabel" runat="server" Text='<%#: Item.LastName %>'></asp:Label>
@@ -105,6 +107,7 @@
                             <tr>
                                 <td>
                                     <asp:TextBox ID="FirstName" runat="server" Text="<%# BindItem.FirstName %>" MaxLength="50"></asp:TextBox>
+
                                 </td>
                                 <td>
                                     <asp:TextBox ID="LastName" runat="server" Text="<%# BindItem.LastName %>" MaxLength="50"></asp:TextBox>
@@ -114,7 +117,7 @@
                                 </td>
                                 <td>
                                     <!-- Knappar för att lägga till kontakter. -->
-                                    <asp:LinkButton runat="server" CommandName="Insert" Text="Lägg till" /> 
+                                    <asp:LinkButton runat="server" CommandName="Insert" Text="Lägg till"  /> 
                                     <asp:LinkButton runat="server" CommandName="Cancel" Text="Avbryt" CausesValidation="false" />
                                 </td>
                             </tr>
@@ -126,6 +129,7 @@
                             <tr>
                                 <td>
                                     <asp:TextBox ID="FirstName" runat="server" Text="<%# BindItem.FirstName %>" MaxLength="50"></asp:TextBox>
+   
                                 </td>
                                 <td>
                                     <asp:TextBox ID="LastName" runat="server" Text="<%# BindItem.LastName %>" MaxLength="50"></asp:TextBox>
@@ -135,7 +139,7 @@
                                 </td>
                                 <td>
                                     <!-- Knappar för att redigera kontakter/databas-->
-                                    <asp:LinkButton runat="server" CommandName="Update" Text="Spara" /> / 
+                                    <asp:LinkButton runat="server" CommandName="Update" Text="Spara" /> 
                                     <asp:LinkButton runat="server" CommandName="Cancel" Text="Avbryt" CausesValidation="false" />
                                 </td>
                             </tr>

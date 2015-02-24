@@ -24,7 +24,8 @@ namespace _1DV406_Labb2_2// Marco Villegas
             {
                 StatusLitteral.Text = Session["lyckades"].ToString();
                 StatusMessage.Visible = true;
-                Session.Remove("lyckades");
+                Session["lyckades"] = null;
+                //Session.Remove("lyckades");
             }
         }
 
@@ -33,6 +34,52 @@ namespace _1DV406_Labb2_2// Marco Villegas
         public IEnumerable<Contact> ContactListView_GetData(int maximumRows, int startRowIndex, out int totalRowCount)//Hämtar alla kontakter som finns lagrade i databasen
         {
             return Service.GetContactsPageWise(maximumRows, startRowIndex, out totalRowCount);
+        }
+
+
+        public void ContactListView_InsertItem(Contact contact)// Lägger till ny medlem i systemet med andra ord Sparar kontakt i databasen
+        {
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        // sparar kontakten i databasen och presenterar ett meddelande om att man lyckats sparar till databas
+                        Service.SaveContact(contact);
+                        Session["lyckades"] = "Kontakten Sparad!";
+                        Response.Redirect(Request.UrlReferrer.ToString());
+                    }
+                    catch (Exception)
+                    {
+                        ModelState.AddModelError("", "Fel inträffade då kontakten skulle läggas till");
+                    }
+                }
+        }
+
+
+        public void ContactListView_UpdateItem(int contactID) //Uppdaterar en kontakt i databasen
+        {
+            try
+            {
+                var contact = Service.GetContact(contactID);
+                if (contact == null)// Om if satsen körs så har man inte hittar kontakten man vill uppdatera, ett fel har då uppstått  
+                {
+                    
+                    ModelState.AddModelError("", String.Format("kontakt {0} hittades inte", contactID));
+                    return;
+                }
+
+                if (TryUpdateModel(contact))
+                {
+                    // Uppdaterar kontakten i databas och presenterar ett meddelande
+                    Service.SaveContact(contact);
+                    Session["lyckades"] = "Kontakten har uppdaterats!";
+                    Response.Redirect(Request.UrlReferrer.ToString());
+                }
+            }
+            catch (Exception)// Fel som uppstått hanteras här    
+            {
+                ModelState.AddModelError("", "fel inträffade då kontakten skulle uppdateras.");
+            }
         }
 
       

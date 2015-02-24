@@ -11,16 +11,16 @@ namespace _1DV406_Labb2_2.Models// Marco villegas
     {
         public int ContactID { get; set; }
 
-        [Required(ErrorMessage = "En epostadress måste anges.")]
+        [Required(ErrorMessage = "En epostadress måste anges")]
         [StringLength(50)]
-        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")]
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "E-postadressen är inte giltig, exmpel Marco.Villegas@live")]
         public string EmailAddress { get; set; }
 
-        [Required(ErrorMessage="Ett förnamn måste anges.")]
+        [Required(ErrorMessage="Ett förnamn måste anges")]
         [StringLength(50)]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage="Ett efternamn måste anges.")]
+        [Required(ErrorMessage="Ett efternamn måste anges")]
         [StringLength(50)]
         public string LastName { get; set; }
     }

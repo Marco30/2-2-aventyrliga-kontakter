@@ -16,8 +16,14 @@ namespace _1DV406_Labb2_2.Models
             get { return _contactDAL ?? (_contactDAL = new ContactDAL()); }
         }
 
-        // Hämtar alla kontakter.
-        public IEnumerable<Contact> GetContacts()
+        
+        public Contact GetContact(int contactID) // Hämtar specifik kontakt från databasen
+        {
+            return ContactDAL.GetContactByID(contactID);
+        }
+
+ 
+        public IEnumerable<Contact> GetContacts()// Hämtar alla kontakter som finns lagrade i databasen
         {
             return ContactDAL.GetContacts();
         }
@@ -27,9 +33,29 @@ namespace _1DV406_Labb2_2.Models
             return ContactDAL.GetContactsPageWise(maximumRows, startRowIndex, out totalRowCount);
         }
 
-  
-        // Raderar en kontakt
-        public void DeleteContact(int contactID)
+      
+        public void SaveContact(Contact contact)// Sparar till databas, ny kontakt eller med uppdaterad information
+        {
+            ICollection<ValidationResult> validationResults;
+            if (!contact.Validate(out validationResults))
+            {
+                var ex = new ValidationException("Kontaktobjektet klarade inte datavalideringen.");
+                ex.Data.Add("ValidationResults", validationResults);
+                throw ex;
+            }
+
+            if (contact.ContactID == 0)
+            {
+                ContactDAL.InsertContact(contact);
+            }
+            else
+            {
+                ContactDAL.UpdateContact(contact);
+            }           
+        }
+
+      
+        public void DeleteContact(int contactID)// Raderar kontakt som finn i databasen
         {
             ContactDAL.DeleteContact(contactID);
         }
